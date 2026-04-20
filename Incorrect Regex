@@ -1,0 +1,9 @@
+import re
+T = int(raw_input())
+for _ in range(T):
+    try:
+        s = raw_input()
+        re.compile(s)
+        print "True"
+    except:
+        print "False"
