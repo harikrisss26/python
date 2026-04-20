@@ -1,0 +1,17 @@
+from collections import deque
+for _ in range(int(input())):
+    n = int(input())
+    side_lengths = deque(map(int, input().split()))
+    last_picked = float('inf')
+    possible = True
+    while side_lengths:
+        if side_lengths[0] >= side_lengths[-1]:
+            current = side_lengths.popleft()
+        else:
+            current = side_lengths.pop()
+            
+        if current > last_picked:
+            possible = False
+            break
+        last_picked = current   
+    print("Yes" if possible else "No")
