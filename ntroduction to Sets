@@ -1,0 +1,6 @@
+def average(array):
+    distinct_heights=set(array)
+    sum_of_heights=sum(distinct_heights)
+    count_of_height=len(distinct_heights)
+    return sum_of_heights/count_of_height
+  
