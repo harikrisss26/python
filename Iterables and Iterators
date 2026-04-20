@@ -1,0 +1,8 @@
+from itertools import combinations
+n = int(input())
+letters = input().split()
+k = int(input())
+all_combinations = list(combinations(letters, k))
+contains_a = [c for c in all_combinations if 'a' in c]
+probability = len(contains_a) / len(all_combinations)
+print(f"{probability:.4f}")
