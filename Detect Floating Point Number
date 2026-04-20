@@ -1,0 +1,7 @@
+import re
+t = int(input())
+
+for _ in range(t):
+    n = input()
+    is_valid = bool(re.match(r'^[+-]?\d*\.\d+$', n))
+    print(is_valid)
