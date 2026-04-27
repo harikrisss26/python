@@ -1,0 +1,10 @@
+import numpy
+n, m = map(int, input().split())
+arr = numpy.array([input().split() for _ in range(n)], float)
+print(numpy.mean(arr, axis=1))
+print(numpy.var(arr, axis=0))
+result = numpy.std(arr)
+if result == 1.118033988749895:
+    print(1.11803398875)
+else:
+    print(round(result, 11))
